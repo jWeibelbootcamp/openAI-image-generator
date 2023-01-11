@@ -4,7 +4,7 @@
 
 ![Screenshot](./images/screenshot.png)
 
-[Website](https://jweibelbootcamp.github.io/openAI-image-generator/)
+[Website](https://frozen-brook-70970.herokuapp.com/)
 
 ## Table of Contents
 - [Project Description](#description)

@@ -117,3 +117,32 @@ img {
   text-align: center;
   margin-top: 1rem;
 }
+
+@media all and (max-width:480px) {
+  .navbar h2 {
+    text-align: left;
+  }
+  
+  .navbar ul {
+    text-align: right;
+  }
+
+  .showcase {
+    width: 100vw;
+  }
+
+  .showcase form input,
+  form select {
+    width: 95vw;
+    max-width: 95vw;
+  }
+
+  img {
+    width: 95vw;
+  }
+
+  .image {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+}

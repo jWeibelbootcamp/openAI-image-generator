@@ -1,6 +1,10 @@
 const onSubmit = (e) => {
     e.preventDefault();
 
+    // reset the message and image
+    document.querySelector('.msg').textContent = '';
+    document.querySelector('#image').src = '';
+
     // add number later
     const prompt = document.querySelector('#prompt').value;
     const size = document.querySelector('#size').value;
@@ -28,14 +32,17 @@ const generateImageRequest = async (prompt, size) => {
             })
         });
 
-        // check for errors the catch will miss and remove spinner or it stays
+        // check for non-runtime errors the catch will miss and remove spinner or it stays
         if (!response.ok) {
             removeSpinner()
             throw new Error('That image could not be generated');
         };
 
         const data = await response.json();
-        console.log(data);
+        const imageURL = data.data;
+
+        document.querySelector('#image').src = imageURL;
+
         removeSpinner();
     } catch (error) {
         document.querySelector('.msg').textContent = error;
@@ -43,11 +50,11 @@ const generateImageRequest = async (prompt, size) => {
 };
 
 const showSpinner = () => {
-    document.querySelector('.spinner').classList.add('show');
+    document.querySelector('.loading').classList.add('show');
 };
 
 const removeSpinner = () => {
-    document.querySelector('.spinner').classList.remove('show');
+    document.querySelector('.loading').classList.remove('show');
 };
 
 document.querySelector('#image-form').addEventListener('submit', onSubmit);

@@ -7,7 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d public",
     "start": "node server",
     "dev": "nodemon server"
   },
@@ -21,10 +21,11 @@
   "bugs": {
     "url": "https://github.com/jWeibelbootcamp/openAI-image-generator/issues"
   },
-  "homepage": "https://github.com/jWeibelbootcamp/openAI-image-generator#readme",
+  "homepage": "https://github.com/jWeibelbootcamp/openAI-image-generator",
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "gh-pages": "^4.0.0",
     "openai": "^3.1.0"
   },
   "devDependencies": {

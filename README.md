@@ -4,6 +4,8 @@
 
 ![Screenshot](./images/screenshot.png)
 
+[Website](https://jweibelbootcamp.github.io/openAI-image-generator/)
+
 ## Table of Contents
 - [Project Description](#description)
 - [Installation Instructions](#installation)

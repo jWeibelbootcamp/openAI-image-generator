@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const dotenv = require('dotenv').config();
-const port = 443 || process.env.PORT ;
+const port = process.env.PORT || 443;
 
 const app = express();
 
